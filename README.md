@@ -100,7 +100,7 @@ mvn spring-boot:run
 
 ## Author
 
-Pranith C.M
+C.M.Pranith
 
 ## License
 
