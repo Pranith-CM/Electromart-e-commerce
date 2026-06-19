@@ -2,194 +2,168 @@
 
 ElectroMart is a modern full-stack e-commerce application built using React, Spring Boot, PostgreSQL, and REST APIs. The platform provides a seamless shopping experience with product browsing, category filtering, search functionality, shopping cart management, and backend database integration.
 
+---
+
 ## Features
 
 ### Frontend
 
-* Modern React + Vite interface
-* Product catalog display
-* Category-based filtering
-* Real-time product search
-* Shopping cart functionality
-* Responsive and clean UI design
-* Deal badges for featured products
+- Modern React + Vite interface
+- Product catalog display
+- Category-based filtering
+- Real-time product search
+- Shopping cart functionality
+- Responsive and clean UI design
+- Deal badges for featured products
 
 ### Backend
 
-* Spring Boot REST API
-* PostgreSQL database integration
-* JPA/Hibernate ORM
-* Product repository layer
-* RESTful controller architecture
-<<<<<<< HEAD
+- Spring Boot REST API
+- PostgreSQL database integration
+- JPA / Hibernate ORM
+- Product repository layer
+- RESTful controller architecture
 
 ### Database
 
-* PostgreSQL relational database
-* Product data storage and retrieval
-* Persistent backend integration
+- PostgreSQL relational database
+- Product data storage and retrieval
+- Persistent backend integration
+
+---
 
 ## Tech Stack
 
 ### Frontend
 
-* React
-* Vite
-* JavaScript
-* CSS3
+- React
+- Vite
+- JavaScript
+- CSS3
 
 ### Backend
 
-* Java
-* Spring Boot
-* Spring Data JPA
-* Maven
+- Java
+- Spring Boot
+- Spring Data JPA
+- Maven
 
 ### Database
 
-* PostgreSQL
+- PostgreSQL
+
+---
 
 ## Project Structure
 
 ```text
 electromart
+│
 ├── backend
-│   ├── controller
-│   ├── model
-│   ├── repository
-│   └── resources
+│   ├── src/main/java/com/electromart/backend
+│   │   ├── controller
+│   │   ├── model
+│   │   ├── repository
+│   │   └── BackendApplication.java
+│   │
+│   └── src/main/resources
+│       └── application.properties
+│
+├── public
+│
 ├── src
-│   ├── components
 │   ├── assets
-│   └── App.jsx
-└── public
+│   ├── App.jsx
+│   ├── ProductCard.jsx
+│   └── main.jsx
+│
+├── package.json
+├── vite.config.js
+└── README.md
 ```
 
+---
+
 ## API Endpoint
+
+### Get All Products
 
 ```http
 GET /products
 ```
 
-Returns all available products from the PostgreSQL database.
+Returns all products stored in the PostgreSQL database.
 
-## Installation
+---
 
-### Frontend
+## Installation & Setup
+
+### Clone Repository
+
+```bash
+git clone https://github.com/Pranith-CM/Electromart-e-commerce.git
+cd Electromart-e-commerce
+```
+
+### Frontend Setup
 
 ```bash
 npm install
 npm run dev
 ```
 
-### Backend
-
-```bash
-cd backend
-mvn spring-boot:run
-```
-
-## Future Enhancements
-
-* User Authentication
-* Order Management
-* Payment Gateway Integration
-* Wishlist Feature
-* Product Reviews and Ratings
-* Admin Dashboard
-* Inventory Management
-
-## Author
-
-C.M.Pranith
-
-## License
-
-This project was developed for academic and learning purposes.
-=======
-
-### Database
-
-* PostgreSQL relational database
-* Product data storage and retrieval
-* Persistent backend integration
-
-## Tech Stack
-
-### Frontend
-
-* React
-* Vite
-* JavaScript
-* CSS3
-
-### Backend
-
-* Java
-* Spring Boot
-* Spring Data JPA
-* Maven
-
-### Database
-
-* PostgreSQL
-
-## Project Structure
+Frontend runs on:
 
 ```text
-electromart
-├── backend
-│   ├── controller
-│   ├── model
-│   ├── repository
-│   └── resources
-├── src
-│   ├── components
-│   ├── assets
-│   └── App.jsx
-└── public
+http://localhost:5173
 ```
 
-## API Endpoint
-
-```http
-GET /products
-```
-
-Returns all available products from the PostgreSQL database.
-
-## Installation
-
-### Frontend
-
-```bash
-npm install
-npm run dev
-```
-
-### Backend
+### Backend Setup
 
 ```bash
 cd backend
 mvn spring-boot:run
 ```
 
+Backend runs on:
+
+```text
+http://localhost:8080
+```
+
+---
+
+## Current Functionality
+
+- Product listing from PostgreSQL
+- Category filtering
+- Product search
+- Shopping cart management
+- Featured deal products
+- REST API integration
+- Responsive UI
+
+---
+
 ## Future Enhancements
 
-* User Authentication
-* Order Management
-* Payment Gateway Integration
-* Wishlist Feature
-* Product Reviews and Ratings
-* Admin Dashboard
-* Inventory Management
+- User Authentication
+- Product Reviews & Ratings
+- Wishlist Functionality
+- Order Management
+- Payment Gateway Integration
+- Admin Dashboard
+- Inventory Management
+- Order Tracking
+
+---
 
 ## Author
 
-C.M.Pranith
+**C. M. Pranith**
+
+---
 
 ## License
 
-This project was developed for academic and learning purposes.
-
->>>>>>> 9d505f6 (Update README)
+This project was developed for academic, learning, and portfolio purposes.
