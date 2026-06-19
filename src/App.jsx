@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import ProductCard from "./ProductCard";
-import products from "./products";
 import "./App.css";
 
 const SLOGANS = [
@@ -42,10 +41,18 @@ function useTypingEffect(words, typeSpeed = 80, deleteSpeed = 50, pause = 1800) 
 
 function App() {
   const [cart, setCart] = useState([]);
+const [products, setProducts] = useState([]);
   const [search, setSearch] = useState("");
   const [cartOpen, setCartOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState("All");
   const slogan = useTypingEffect(SLOGANS);
+
+useEffect(() => {
+  fetch("http://localhost:8080/products")
+    .then((res) => res.json())
+    .then((data) => setProducts(data))
+    .catch((err) => console.error(err));
+}, []);
 
   const categories = ["All", ...new Set(products.map((p) => p.category))];
 
@@ -134,7 +141,16 @@ function App() {
                 <span>Total</span>
                 <span>${total.toFixed(2)}</span>
               </div>
-              <button className="checkout-btn">Proceed to Checkout →</button>
+              <button
+  className="checkout-btn"
+  onClick={() => {
+    alert("Order Placed Successfully!");
+    setCart([]);
+    setCartOpen(false);
+  }}
+>
+  Proceed to Checkout →
+</button>
             </div>
           </>
         )}
@@ -156,7 +172,16 @@ function App() {
             <button className="hero-cta" onClick={() => document.getElementById("products").scrollIntoView({ behavior: "smooth" })}>
               Shop Now →
             </button>
-            <button className="hero-ghost">View Deals</button>
+            <button
+  className="hero-ghost"
+  onClick={() =>
+    document.getElementById("products").scrollIntoView({
+      behavior: "smooth",
+    })
+  }
+>
+  View Deals
+</button>
           </div>
           <div className="hero-stats">
             <div className="stat"><strong>50K+</strong><span>Products</span></div>
