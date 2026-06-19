@@ -1,16 +1,107 @@
-# React + Vite
+# ElectroMart - Full Stack E-Commerce Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ElectroMart is a modern full-stack e-commerce application built using React, Spring Boot, PostgreSQL, and REST APIs. The platform provides a seamless shopping experience with product browsing, category filtering, search functionality, shopping cart management, and backend database integration.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### Frontend
 
-## React Compiler
+* Modern React + Vite interface
+* Product catalog display
+* Category-based filtering
+* Real-time product search
+* Shopping cart functionality
+* Responsive and clean UI design
+* Deal badges for featured products
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Backend
 
-## Expanding the ESLint configuration
+* Spring Boot REST API
+* PostgreSQL database integration
+* JPA/Hibernate ORM
+* Product repository layer
+* RESTful controller architecture
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Database
+
+* PostgreSQL relational database
+* Product data storage and retrieval
+* Persistent backend integration
+
+## Tech Stack
+
+### Frontend
+
+* React
+* Vite
+* JavaScript
+* CSS3
+
+### Backend
+
+* Java
+* Spring Boot
+* Spring Data JPA
+* Maven
+
+### Database
+
+* PostgreSQL
+
+## Project Structure
+
+```text
+electromart
+├── backend
+│   ├── controller
+│   ├── model
+│   ├── repository
+│   └── resources
+├── src
+│   ├── components
+│   ├── assets
+│   └── App.jsx
+└── public
+```
+
+## API Endpoint
+
+```http
+GET /products
+```
+
+Returns all available products from the PostgreSQL database.
+
+## Installation
+
+### Frontend
+
+```bash
+npm install
+npm run dev
+```
+
+### Backend
+
+```bash
+cd backend
+mvn spring-boot:run
+```
+
+## Future Enhancements
+
+* User Authentication
+* Order Management
+* Payment Gateway Integration
+* Wishlist Feature
+* Product Reviews and Ratings
+* Admin Dashboard
+* Inventory Management
+
+## Author
+
+Pranith C.M
+
+## License
+
+This project was developed for academic and learning purposes.
